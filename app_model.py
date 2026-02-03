@@ -29,11 +29,11 @@ def predict_range(battery_power, blue, clock_speed, dual_sim, fc, four_g,
 
 inputs = [
     gr.Number(label="Battery Power"),
-    gr.Radio(["Yes", "No"], label="Blue"),
+    gr.Radio([0, 1], label="Blue"),
     gr.Number(label="Clock Speed"),
-    gr.Radio(["Yes", "No"], label="Dual Sim"),
+    gr.Radio([0, 1], label="Dual Sim"),
     gr.Number(label="Front Camera"),
-    gr.Radio(["Yes", "No"], label="Four G"),
+    gr.Radio([0, 1], label="Four G"),
     gr.Number(label="Internal Memory"),
     gr.Number(label="Mobile Depth"),
     gr.Number(label="Mobile Weight"),
@@ -45,9 +45,9 @@ inputs = [
     gr.Number(label="Screen Height"),
     gr.Number(label="Screen Width"),
     gr.Number(label="Talk Time"),
-    gr.Radio(["Yes", "No"], label="Three G"),
-    gr.Radio(["Yes", "No"], label="Touch Screen"),
-    gr.Radio(["Yes", "No"], label="WiFi")
+    gr.Radio([0, 1], label="Three G"),
+    gr.Radio([0, 1], label="Touch Screen"),
+    gr.Radio([0, 1], label="WiFi")
 ]
 
 app = gr.Interface(
