@@ -24,15 +24,7 @@ def predict_range(battery_power, blue, clock_speed, dual_sim, fc, four_g,
         'touch_screen', 'wifi'
     ])
     prediction = model.predict(input_df)[0]
-                      
-    label_map = {
-        0: "Low Cost (0)",
-        1: "Medium Cost (1)",
-        2: "High Cost (2)",
-        3: "Very High Cost (3)"
-    }
-
-    return label_map[pred]
+    return f"Predicted Price Range: {np.clip(prediction, 0, 3)}"
 
 
 inputs = [
